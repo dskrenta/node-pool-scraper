@@ -1,0 +1,22 @@
+{
+  "name": "node-scraper",
+  "version": "0.1.0",
+  "description": "Node.js web scraping utility powered by a puppeteer pool",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dskrenta/node-scraper.git"
+  },
+  "author": "David Skrenta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dskrenta/node-scraper/issues"
+  },
+  "homepage": "https://github.com/dskrenta/node-scraper#readme",
+  "dependencies": {
+    "puppeteer-pool": "^1.0.3"
+  }
+}
