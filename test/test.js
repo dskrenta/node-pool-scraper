@@ -1,6 +1,6 @@
 'use strict';
 
-const NodeScraper = require('../src/NodeScraper');
+const NodePoolScraper = require('../src/NodePoolScraper');
 
 const scraper = new NodeScraper({
   max: 1, 

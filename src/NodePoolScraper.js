@@ -4,7 +4,7 @@ const EventEmitter = require('events');
 
 const createPuppeteerPool = require('puppeteer-pool');
 
-class NodeScraper {
+class NodePoolScraper {
   constructor({
     max, 
     min, 
@@ -46,4 +46,4 @@ class NodeScraper {
   }
 }
 
-module.exports = NodeScraper;
+module.exports = NodePoolScraper;

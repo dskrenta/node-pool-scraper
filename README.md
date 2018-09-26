@@ -1,20 +1,20 @@
-# node-scraper
+# node-pool-scraper
 Node.js web scraping utility powered by puppeteer pool
 
 ## Install
-`$ npm install --save node-scraper`
+`$ npm install --save node-pool-scraper`
 
 ## Usage
 
 Import 
 ```
-const NodeScraper = requre('node-scraper');
-// import NodeScraper from 'node-scraper';
+const NodePoolScraper = requre('node-pool-scraper');
+// import NodePoolScraper from 'node-pool-scraper';
 ```
 
 Create new scraping pool
 ```
-const scraper = new NodeScraper({
+const scraper = new NodePoolScraper({
   max: 10, // max puppeteer instances
   min: 1 // min puppeteer instances
   idleTimeoutMillis: 30000, // idle timeout (default 30000)
@@ -57,9 +57,9 @@ scraper.clear();
 
 ## Example
 ```
-const NodeScraper = require('node-scraper');
+const NodePoolScraper = require('node-pool-scraper');
 
-const scraper = new NodeScraper({
+const scraper = new NodePoolScraper({
   max: 10, 
   min: 1
 });
