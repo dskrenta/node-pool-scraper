@@ -18,5 +18,8 @@
   "homepage": "https://github.com/dskrenta/node-pool-scraper#readme",
   "dependencies": {
     "puppeteer-pool": "^1.0.3"
-  }
+  },
+  "keywords": [
+    "puppeteer", "scraping", "scraper", "crawling", "dom", "javascript", "crawler", "nodejs", "spider"
+  ]
 }
