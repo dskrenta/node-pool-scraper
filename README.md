@@ -6,6 +6,12 @@ Node.js web scraping utility powered by puppeteer pool
 
 ## Usage
 
+Import 
+```
+const NodeScraper = requre('node-scraper');
+// import NodeScraper from 'node-scraper';
+```
+
 Create new scraping pool
 ```
 const scraper = new NodeScraper({
