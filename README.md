@@ -8,7 +8,7 @@ Node.js web scraping utility powered by puppeteer pool
 
 Import 
 ```
-const NodePoolScraper = requre('node-pool-scraper');
+const NodePoolScraper = require('node-pool-scraper');
 // import NodePoolScraper from 'node-pool-scraper';
 ```
 
