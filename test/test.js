@@ -2,7 +2,7 @@
 
 const NodePoolScraper = require('../src/NodePoolScraper');
 
-const scraper = new NodeScraper({
+const scraper = new NodePoolScraper({
   max: 1, 
   min: 1
 });
