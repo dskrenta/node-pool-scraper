@@ -9,7 +9,8 @@ class NodePoolScraper {
     max, 
     min, 
     idleTimeoutMillis = 30000,
-    puppeteerArgs = []
+    puppeteerArgs = [],
+    ...otherOptions
   }) {
     this.pool = createPuppeteerPool({
       max,
@@ -18,7 +19,8 @@ class NodePoolScraper {
       maxUses: 50,
       validator: () => Promise.resolve(true),
       testOnBorrow: true,
-      puppeteerArgs: ['--disable-dev-shm-usage', ...puppeteerArgs]
+      puppeteerArgs: ['--disable-dev-shm-usage', ...puppeteerArgs],
+      ...otherOptions
     });
 
     this.scraperEvents = new EventEmitter();
