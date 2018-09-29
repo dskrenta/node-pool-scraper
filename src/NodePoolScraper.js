@@ -2,7 +2,7 @@
 
 const EventEmitter = require('events');
 
-const createPuppeteerPool = require('puppeteer-pool');
+const createPuppeteerPool  = require('./PuppeteerPool');
 
 class NodePoolScraper {
   constructor({
