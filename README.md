@@ -18,7 +18,8 @@ const scraper = new NodePoolScraper({
   max: 10, // max puppeteer instances
   min: 1 // min puppeteer instances
   idleTimeoutMillis: 30000, // idle timeout (default 30000)
-  puppeteerArgs: [] // puppeteer args (default ['--disable-dev-shm-usage'])
+  puppeteerArgs: [] // puppeteer args (default ['--disable-dev-shm-usage']),
+  ...otherPuppeteerOptions
 });
 ``` 
 
