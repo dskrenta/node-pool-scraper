@@ -31,9 +31,9 @@ class NodePoolScraper {
   }
 
   main() {
-    this.scraperEvents.on('addTarget', ({ url, func }) => {
+    this.scraperEvents.on('addTarget', ({ url, func, ...rest }) => {
       this.pool.use(async (browser) => {
-        await func({ url, browser });
+        await func({ url, browser, ...rest });
       });
     });
   }

@@ -7,8 +7,10 @@ const scraper = new NodePoolScraper({
   min: 1
 });
 
-async function logScript({ url, browser }) {
+async function logScript({ url, browser, anotherValue }) {
   try {
+    console.log(anotherValue);
+
     const page = await browser.newPage();
     const status = await page.goto(url);
 
@@ -40,7 +42,7 @@ scraper.addTarget({
 
       const content = await page.content();
 
-      scraper.addTarget({ url: 'http://google.com', func: logScript });
+      scraper.addTarget({ url: 'http://google.com', func: logScript, anotherValue: true });
 
       console.log('Presearch', content);
     }
