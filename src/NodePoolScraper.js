@@ -2,14 +2,15 @@
 
 const EventEmitter = require('events');
 
-const createPuppeteerPool = require('puppeteer-pool');
+const createPuppeteerPool  = require('./PuppeteerPool');
 
 class NodePoolScraper {
   constructor({
     max, 
     min, 
     idleTimeoutMillis = 30000,
-    puppeteerArgs = []
+    puppeteerArgs = [],
+    ...otherOptions
   }) {
     this.pool = createPuppeteerPool({
       max,
@@ -18,7 +19,8 @@ class NodePoolScraper {
       maxUses: 50,
       validator: () => Promise.resolve(true),
       testOnBorrow: true,
-      puppeteerArgs: ['--disable-dev-shm-usage', ...puppeteerArgs]
+      puppeteerArgs: ['--disable-dev-shm-usage', ...puppeteerArgs],
+      ...otherOptions
     });
 
     this.scraperEvents = new EventEmitter();

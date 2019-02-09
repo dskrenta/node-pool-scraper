@@ -4,7 +4,8 @@ const NodePoolScraper = require('../src/NodePoolScraper');
 
 const scraper = new NodePoolScraper({
   max: 1, 
-  min: 1
+  min: 1,
+  headless: false
 });
 
 async function logScript({ url, browser, anotherValue }) {
